@@ -6,4 +6,6 @@ const Artist = require('../models/artist');
  * @return {promise} A promise that resolves when the record is deleted
  */
 module.exports = (_id) => {
+    //Artist.remove({_id})
+    return Artist.findByIdAndRemove(_id);
 };
