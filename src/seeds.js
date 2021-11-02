@@ -21,10 +21,8 @@ db.open()
         artistsCollection.insertMany(artists);
       }
     })
-    //console.log('artistsCollection.count({})', a)
     return artistsCollection.count({});
   })
-
   .catch(e => console.log('Error on seed', e));
 
 
