@@ -7,9 +7,13 @@ const Artist = require('../models/artist');
  */
 module.exports = (_ids) => {
     //console.log(_ids);
-    return Artist.updateMany(
+    // return Artist.updateMany(
+    //     { _id: { $in: _ids } },
+    //     { retired: false }
+    // )
+    return Artist.update(
         { _id: { $in: _ids } },
-        { retired: false }
+        { retired: false },
+        { multi: true }
     )
-
 };

@@ -15,7 +15,7 @@ module.exports = (criteria, sortProperty, offset = 0, limit = 20) => {
     //     .sort({ sortProperty: 1 })
     //     .skip(offset)
     //     .limit(limit).then(result => console.log(result._doc))
-    console.log('creteris', criteria)
+    // console.log('creteris', criteria)
 
 
     const query = Artist.find(buildQuery(criteria))
@@ -25,7 +25,7 @@ module.exports = (criteria, sortProperty, offset = 0, limit = 20) => {
 
     return Promise.all([query, Artist.count()])
         .then(result => {
-            console.log(result)
+            // console.log(result)
             return {
                 all: result[0],
                 count: result[1],

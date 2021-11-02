@@ -17,8 +17,8 @@ module.exports = () => {
         .sort({ yearsActive: -1 })
         .limit(1)
         .then(artist => artist[0].yearsActive)
-    console.log(minQuery)
-    console.log(maxQuery)
+    //console.log(minQuery)
+    //Sconsole.log(maxQuery)
 
     return Promise.all([minQuery, maxQuery])
         .then(result => {
